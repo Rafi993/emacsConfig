@@ -89,8 +89,18 @@
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
 
+(setq org-agenda-files (list "~/org/morning.org"
+                             "~/org/evening.org" 
+                             "~/org/night.org"
+			     "~/org/work.org"
+			     "~/org/sideProjects.org"
+			     "~/org/reading.org"))
+
 
 ;;; Disabling scrollbar
 (scroll-bar-mode -1)
 ;;; Disabling toolbar
 (tool-bar-mode -1)
+
+;;; Adding flowjs support
+(load-file "~/.emacs.d/flow-for-emacs/flow.el")
